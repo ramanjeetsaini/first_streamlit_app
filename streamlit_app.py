@@ -10,7 +10,8 @@ streamlit.text('🐔 Butter Chicken')
 streamlit.text('🥣 Dal Tadka')
 streamlit.header(' Build your own smoothie')
 streamlit.dataframe(my_fruit_list)
+my_fruit_list = my_fruit_list.set_index('Fruit')
 
 #putting a pickup list to pick fruits they want to include
-streamlit.multiselect("Pick some fruits",list(my_fruit_list.fruit))
+streamlit.multiselect("Pick some fruits",list(my_fruit_list.index))
 
